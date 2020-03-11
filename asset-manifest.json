@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/peturpet/static/js/main.a85eefb8.chunk.js",
-    "main.js.map": "/peturpet/static/js/main.a85eefb8.chunk.js.map",
-    "runtime-main.js": "/peturpet/static/js/runtime-main.efecc6a8.js",
-    "runtime-main.js.map": "/peturpet/static/js/runtime-main.efecc6a8.js.map",
-    "static/js/2.8f1ec97c.chunk.js": "/peturpet/static/js/2.8f1ec97c.chunk.js",
-    "static/js/2.8f1ec97c.chunk.js.map": "/peturpet/static/js/2.8f1ec97c.chunk.js.map",
-    "index.html": "/peturpet/index.html",
-    "precache-manifest.8370ae794d1eb7fc60b0e3c14bbc96e2.js": "/peturpet/precache-manifest.8370ae794d1eb7fc60b0e3c14bbc96e2.js",
-    "service-worker.js": "/peturpet/service-worker.js",
-    "static/js/2.8f1ec97c.chunk.js.LICENSE.txt": "/peturpet/static/js/2.8f1ec97c.chunk.js.LICENSE.txt"
+    "main.js": "/static/js/main.a85eefb8.chunk.js",
+    "main.js.map": "/static/js/main.a85eefb8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2168a4bd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2168a4bd.js.map",
+    "static/js/2.8f1ec97c.chunk.js": "/static/js/2.8f1ec97c.chunk.js",
+    "static/js/2.8f1ec97c.chunk.js.map": "/static/js/2.8f1ec97c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.bd433eeb784ac9e40a476ffa6a561f4d.js": "/precache-manifest.bd433eeb784ac9e40a476ffa6a561f4d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.8f1ec97c.chunk.js.LICENSE.txt": "/static/js/2.8f1ec97c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.efecc6a8.js",
+    "static/js/runtime-main.2168a4bd.js",
     "static/js/2.8f1ec97c.chunk.js",
     "static/js/main.a85eefb8.chunk.js"
   ]
