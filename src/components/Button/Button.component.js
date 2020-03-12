@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import './Button.stylesheet.scss';
+
 const Button = ({ text, className, onClick }) => (
   <button
     className={classNames('button_component', className)}
