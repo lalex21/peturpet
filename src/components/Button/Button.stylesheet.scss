@@ -1,18 +1,41 @@
 .button_component {
   height: 45px;
-  width: 314px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
   border-radius: 60px;
   color: #ffffff;
-  font-size: 17px;
-  line-height: 21px;
+  // font-family: 'Roboto';
+  // font-size: 17px;
+  // line-height: 21px;
 
-  &.sweet_pink {
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.primary {
     background-color: #fd9697;
   }
 
-  &.fauxplum_purple {
+  &.secondary {
     background-color: #5a48a3;
+  }
+
+  i {
+    width: 19.8px;
+    height: 19.8px;
+    position: absolute;
+    right: 0;
+  }
+
+  i.paw {
+    background: url("../../assets/icons/paw.svg") no-repeat top left;
   }
 }

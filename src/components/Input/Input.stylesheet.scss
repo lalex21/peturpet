@@ -1,0 +1,26 @@
+.input_component {
+    height: 45px;
+    width: calc(100% - 30px);
+    background: #F6F7F9;
+    border: none;
+    border-radius: 23px;
+    padding-left: 30px;
+    font-family: 'Roboto';
+    font-size: 17px;
+    line-height: 21px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.error {
+        border: 1px solid #FD969780;
+    }
+
+    &--error-label {
+        color: #FD9697;
+        font-family: 'Roboto';
+        font-size: 11px;
+        line-height: 21px;
+    }
+}
