@@ -5,12 +5,17 @@ import LoginContainer from '../containers/Login/Login.container';
 import SignInContainer from '../containers/SignIn/SignIn.container';
 import ForgotPasswordContainer from '../containers/ForgetPassword/ForgetPassword.container';
 import BuildingContainer from '../containers/Building/Building.container';
+import ComponentsTest from '../containers/ComponentsTest/ComponentsTest';
 
 const NotFound = () => <div>NotFound</div>;
 
 const pathRoot = pathRootAplication;
 
 export const RoutesNoAuth = {
+  ComponentsTestRoot: {
+    path: `${pathRoot}/test`,
+    component: ComponentsTest
+  },
   Login: {
     path: `${pathRoot}/login`,
     component: LoginContainer
