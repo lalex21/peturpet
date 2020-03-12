@@ -4,18 +4,15 @@ import RouteAnimate from '../../animations/Route/Route.animation';
 
 import LinkComponent from '../../components/Link/Link.component';
 
-const LoginContainer = ({ routes }) => {
+const ForgotPasswordContainer = ({ routes }) => {
   const show = false;
   console.log(show, routes);
   return (
     <RouteAnimate>
-      <div>Login</div>
-      <LinkComponent to={routes.ForgetPassword.path}>
-        go ForgetPassword
-      </LinkComponent>
-      <LinkComponent to={routes.SignIn.path}>go Registro</LinkComponent>
+      <div>ForgotPassword</div>
+      <LinkComponent to={routes.Login.path}>go Login</LinkComponent>
     </RouteAnimate>
   );
 };
 
-export default LoginContainer;
+export default ForgotPasswordContainer;

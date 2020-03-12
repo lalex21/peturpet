@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 import Routes, { RoutesNoAuth } from '../../constants/routes';
 
 export const CreateSwitchRouter = ({ routes }) => {
+  const location = useLocation();
   return (
-    <Switch>
+    <Switch location={location} key={location.pathname}>
       {Object.keys(routes).map(route => {
         const { exact = true, path, component, redirect, props = {} } = routes[
           route
@@ -22,7 +23,7 @@ export const CreateSwitchRouter = ({ routes }) => {
               const customProps = {
                 ...props,
                 ...propsRouter,
-                routes: Routes
+                routes
               };
               return React.createElement(component, customProps);
             }}
