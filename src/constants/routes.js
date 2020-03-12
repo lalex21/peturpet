@@ -4,9 +4,9 @@ import { pathRootAplication } from '../environment/environment';
 import LoginContainer from '../containers/Login/Login.container';
 import SignInContainer from '../containers/SignIn/SignIn.container';
 import ForgotPasswordContainer from '../containers/ForgetPassword/ForgetPassword.container';
+import BuildingContainer from '../containers/Building/Building.container';
 
 const NotFound = () => <div>NotFound</div>;
-const Building = () => <div>Building</div>;
 
 const pathRoot = pathRootAplication;
 
@@ -39,7 +39,7 @@ export const RoutesNoAuth = {
 
 export default {
   Home: {
-    component: Building,
+    component: BuildingContainer,
     exact: true
   },
   HomePathRoot: {

@@ -1,0 +1,12 @@
+.layout_template {
+  display: flex;
+
+  &--full_screen {
+    height: 100vh;
+  }
+
+  &--center {
+    justify-content: center;
+    align-items: center;
+  }
+}

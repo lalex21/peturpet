@@ -1,7 +1,7 @@
 import { AUTH_UPDATE_TOKEN } from '../../constants/Auth/Auth.types';
 
 const initialState = {
-  isLogin: false,
+  isLogin: true,
   token: null
 };
 

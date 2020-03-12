@@ -2,7 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from '../../utils/PropTypes';
 
-const RouteAnimation = ({ children, transition, inVariant, outVariant }) => {
+const RouteAnimation = ({
+  children,
+  transition,
+  inVariant,
+  outVariant,
+  className
+}) => {
   const pageVariants = {
     in: {
       opacity: 1,
@@ -20,6 +26,7 @@ const RouteAnimation = ({ children, transition, inVariant, outVariant }) => {
 
   return (
     <motion.section
+      className={className}
       initial="out"
       animate="in"
       exit="out"
@@ -35,13 +42,15 @@ RouteAnimation.propTypes = {
   children: PropTypes.children.isRequired,
   transition: PropTypes.objectOf(PropTypes.any),
   inVariant: PropTypes.objectOf(PropTypes.any),
-  outVariant: PropTypes.objectOf(PropTypes.any)
+  outVariant: PropTypes.objectOf(PropTypes.any),
+  className: PropTypes.string
 };
 
 RouteAnimation.defaultProps = {
   transition: {},
   inVariant: {},
-  outVariant: {}
+  outVariant: {},
+  className: ''
 };
 
 export default RouteAnimation;

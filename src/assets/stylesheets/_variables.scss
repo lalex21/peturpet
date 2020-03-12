@@ -8,12 +8,33 @@ $spacing-xl: 32px;
 $spacing-xxl: 48px;
 
 /*--Font Family--*/
-$ff-Roboto: 'Roboto';
-$ff-Roboto-Bold: 'Roboto Bold';
-$ff-Roboto-Black: 'Roboto Black';
+$ff-Roboto: 'Roboto', sans-serif;
+$ff-Roboto-Medium: 'Roboto-Medium', sans-serif;
+$ff-Roboto-Bold: 'Roboto-Bold', sans-serif;
+$ff-Roboto-Black: 'Roboto-Black', sans-serif;
 
 /*--Font Size--*/
-$fs-button: 17px;
+$fs-button: 17dp;
+$fs-btn-link: 14dp;
 
 /*--Line Height--*/
 $lh-button: 21px;
+
+/*--Colors--*/
+$orange-pale: #fff3e0;
+
+/*--Bootstrap Grid--*/
+$grid-columns: 12;
+$grid-gutter-width: $spacing-m;
+$grid-breakpoints: (
+  // Extra small screen / phone
+    xs: 0,
+  // Small screen / phone
+    sm: 576px,
+  // Medium screen / tablet
+    md: 768px,
+  // Large screen / desktop
+    lg: 992px,
+  // Extra large screen / wide desktop
+    xl: 1200px
+);
