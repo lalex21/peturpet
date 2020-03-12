@@ -1,6 +1,7 @@
 .button_component {
   height: 45px;
   width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,9 +9,6 @@
   border: none;
   border-radius: 60px;
   color: #ffffff;
-  // font-family: 'Roboto';
-  // font-size: 17px;
-  // line-height: 21px;
 
   &:focus {
     outline: none;
