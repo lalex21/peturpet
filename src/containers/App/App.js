@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
@@ -38,12 +38,17 @@ import '../../assets/stylesheets/index.scss';
 
 // eslint-disable-next-line no-unused-vars
 const AppContainer = ({ auth }) => {
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => {
+    setLoading(false);
+  }, 2000);
+
   return (
     <BrowserRouter>
       <ErrorBoundary>
         <AnimatePresence exitBeforeEnter>
           <main>
-            <Router isLogin={auth} />
+            <Router isLogin={auth} isLoading={loading} />
           </main>
         </AnimatePresence>
       </ErrorBoundary>

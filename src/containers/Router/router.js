@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 import Routes, { RoutesNoAuth } from '../../constants/routes';
+import SplashContainer from '../Splash/Splash.container';
 
 export const CreateSwitchRouter = ({ routes }) => {
   const location = useLocation();
@@ -43,27 +44,10 @@ CreateSwitchRouter.propTypes = {
   routes: PropTypes.objectOf(PropTypes.object).isRequired
 };
 
-const RouterContainer = ({ isLogin }) => {
-  //   if (isLogin) {
-  //     return loading ? (
-  //       <AsDialogLoader
-  //         center
-  //         className="routes__switch--loader"
-  //         title="¡Estamos cargando la mejor experiencia para ti!"
-  //         description="Hagamos que las cosas pasen como quieres que pasen"
-  //       />
-  //     ) : (
-  //       <>
-  //         <IdleTimer
-  //           timeout={3}
-  //           onRunOut={MsalService.logout}
-  //           warningTime={2}
-  //           warningMessage="Lleva 3 minutos de inactividad. En 2 minutos su sesión será cerrada si no presenta ninguna actividad"
-  //         />
-  //         <CreateSwitchRouter routes={Routes} />
-  //       </>
-  //     );
-  //   }
+const RouterContainer = ({ isLogin, isLoading }) => {
+  if (isLoading) {
+    return <SplashContainer />;
+  }
   return <CreateSwitchRouter routes={isLogin ? Routes : RoutesNoAuth} />;
 };
 

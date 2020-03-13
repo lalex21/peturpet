@@ -5,13 +5,17 @@ import { Container } from '../../components/Grid/Grid.component';
 
 import './Layout.stylesheet.scss';
 
-const LayoutTemplate = ({ children, center, full }) => {
+const LayoutTemplate = ({ children, className, center, full }) => {
   return (
     <article
-      className={classNames('layout_template', {
-        'layout_template--full_screen': full,
-        'layout_template--center': center
-      })}
+      className={classNames(
+        'layout_template',
+        {
+          'layout_template--full_screen': full,
+          'layout_template--center': center
+        },
+        className
+      )}
     >
       <Container>{children}</Container>
     </article>

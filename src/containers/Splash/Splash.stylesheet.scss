@@ -1,0 +1,32 @@
+@import '../../assets/stylesheets/variables';
+
+.splash_container {
+  background-color: #5a48a3;
+  background-image: url(../../assets/images/drawable-hdpi/bg.png);
+  background-repeat: repeat;
+  background-position: center;
+  text-align: center;
+
+  &--footer {
+    color: white;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    background-image: url(../../assets/images/drawable-mdpi/bg.png);
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+    background-image: url(../../assets/images/drawable-xhdpi/bg.png);
+
+    &--footer {
+      bottom: 4%;
+    }
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+    background-image: url(../../assets/images/drawable-xxxhdpi/bg.png);
+  }
+}

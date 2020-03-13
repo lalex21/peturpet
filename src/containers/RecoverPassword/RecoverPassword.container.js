@@ -9,7 +9,6 @@ const RecoverPasswordContainer = ({ routes }) => {
   return (
     <RouteAnimate>
       <div>RecoverPassword</div>
-      <img></img>
       <LinkComponent to={routes.Login.path}>go Login</LinkComponent>
     </RouteAnimate>
   );
