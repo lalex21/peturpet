@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col } from '../Grid/Grid.component';
 import BuildingAnimation from '../../animations/Building/Building.animation';
+import LinkComponent from '../Link/Link.component';
 
-// import LinkComponent from '../../components/Link/Link.component';
 import './Building.stylesheet.scss';
 import Button from '../Button/Button.component';
 
@@ -18,9 +18,11 @@ const BuildingComponent = () => {
           Esta sección está en construcción, pronto podrás disfrutar de todos
           nuestros servicios.
         </p>
-        <Button className="building_component--info-button secondary">
-          Volver al inicio
-        </Button>
+        <div className="building_component--info-button">
+          <Button className="secondary">
+            <LinkComponent to="/adios">Volver al inicio</LinkComponent>
+          </Button>
+        </div>
       </Col>
     </Row>
   );

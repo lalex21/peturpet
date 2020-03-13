@@ -12,6 +12,11 @@
   font-size: 17px;
   line-height: 21px;
 
+  a {
+    width: 100%;
+    color: #ffffff;
+  }
+
   &:focus {
     outline: none;
   }
