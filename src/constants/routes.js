@@ -4,6 +4,7 @@ import { pathRootAplication } from '../environment/environment';
 import LoginContainer from '../containers/Login/Login.container';
 import SignInContainer from '../containers/SignIn/SignIn.container';
 import ForgotPasswordContainer from '../containers/ForgetPassword/ForgetPassword.container';
+import RecoverPasswordContainer from '../containers/RecoverPassword/RecoverPassword.container';
 import BuildingContainer from '../containers/Building/Building.container';
 import ComponentsTest from '../containers/ComponentsTest/ComponentsTest';
 
@@ -27,6 +28,10 @@ export const RoutesNoAuth = {
   ForgetPassword: {
     path: `${pathRoot}/forgot-password`,
     component: ForgotPasswordContainer
+  },
+  RecoverPassword: {
+    path: `${pathRoot}/recover-password`,
+    component: RecoverPasswordContainer
   },
   LoginPath: {
     path: '/',
