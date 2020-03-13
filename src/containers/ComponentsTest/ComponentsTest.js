@@ -3,7 +3,8 @@ import React from 'react';
 import Button from '../../components/Button/Button.component';
 import Input from '../../components/Input/Input.component';
 import StepToStep from '../../components/StepToStep/StepToStep.component';
-import Step from '../../components/Step/Step';
+import Step from '../../components/Step/Step.component';
+import GoogleLogin from '../../components/GoogleLogin/GoogleLogin.component';
 
 import '../../assets/stylesheets/index.scss';
 
@@ -33,6 +34,8 @@ const App = () => (
     </StepToStep>
     <div>Step To Step Error</div>
     <StepToStep />
+    <div>Google Login</div>
+    <GoogleLogin />
   </div>
 );
 
