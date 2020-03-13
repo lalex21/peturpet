@@ -1,3 +1,40 @@
+@import '../../assets/stylesheets/variables';
+
 .building_component {
   overflow: hidden;
+  &--svg {
+    .svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -$spacing-l;
+
+    &-title {
+      text-align: center;
+      color: #5a48a3;
+      font-size: 30px;
+      line-height: 29px;
+
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        font-size: 40px;
+      }
+    }
+
+    &-description {
+      text-align: center;
+      color: #5a5a5a;
+      padding: $spacing-l;
+      font-size: 17px;
+      line-height: 27px;
+
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        font-size: 18px;
+      }
+    }
+  }
 }

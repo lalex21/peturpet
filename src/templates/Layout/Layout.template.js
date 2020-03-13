@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from '../../utils/PropTypes';
+import { Container } from '../../components/Grid/Grid.component';
 
 import './Layout.stylesheet.scss';
 
@@ -12,7 +13,7 @@ const LayoutTemplate = ({ children, center, full }) => {
         'layout_template--center': center
       })}
     >
-      {children}
+      <Container>{children}</Container>
     </article>
   );
 };
