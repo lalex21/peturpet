@@ -1,10 +1,19 @@
+@import '../../assets/stylesheets/variables';
+
 div.radiobutton_component {
+    display: flex;
+    justify-content: center;
+
     &--option {
         display: flex;
         color: #9DA1AE;
         font-family: 'Roboto';
         font-size: 16px;
         line-height: 21px;
+
+        &:not(:last-child) {
+            margin-right: $spacing-xxl;
+        }
 
         & > input[type=radio] {
             display: none;
