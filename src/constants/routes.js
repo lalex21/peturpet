@@ -35,11 +35,11 @@ export const RoutesNoAuth = {
   },
   LoginPath: {
     path: '/',
-    redirect: 'Login'
+    redirect: 'SignIn'
   },
   LoginPathRoot: {
     path: pathRoot,
-    redirect: 'Login'
+    redirect: 'SignIn'
   },
   NotFound: {
     component: NotFound,

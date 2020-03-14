@@ -1,27 +1,32 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { motion } from 'framer-motion';
+import PropTypes from '../../utils/PropTypes';
 
 const Step = ({
-  text,
+  children,
   toNextStep
   // , toStep, toPrevStep
 }) => {
   return (
-    <div
+    <motion.div
+      drag="x"
+      dragConstraints={{ left: -100, right: 100 }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
       role="button"
       tabIndex={0}
       className={classNames('step_component')}
       onClick={() => toNextStep()}
       onKeyDown={() => toNextStep()}
     >
-      {text}
-    </div>
+      {children}
+    </motion.div>
   );
 };
 
 Step.propTypes = {
-  text: PropTypes.string.isRequired,
+  children: PropTypes.children.isRequired,
   // toStep: PropTypes.func.isRequired,
   // toPrevStep: PropTypes.func.isRequired
   toNextStep: PropTypes.func.isRequired

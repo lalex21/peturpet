@@ -1,0 +1,45 @@
+@import '../../assets/stylesheets/variables';
+@import '../../assets/stylesheets/fonts';
+
+.onboarding_template {
+  text-align: center;
+  padding: $spacing-xl 0 $spacing-l;
+
+  &--logo {
+    svg {
+      width: 50%;
+    }
+  }
+
+  &--content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 10vh;
+    // min-height: 48vh;
+    // max-height: 48vh;
+  }
+
+  &--description {
+    @extend .ff-Roboto-Bold;
+    color: white;
+    font-size: 17px;
+    margin: $spacing-m 0;
+  }
+
+  &--continue {
+    margin-bottom: $spacing-s;
+  }
+
+  &--login {
+    p {
+      @extend .ff-Roboto-Bold;
+      color: white;
+      font-size: 17px;
+      span {
+        color: #efa0ab;
+        text-decoration: underline;
+      }
+    }
+  }
+}

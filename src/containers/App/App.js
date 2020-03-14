@@ -41,7 +41,7 @@ const AppContainer = ({ auth }) => {
   const [loading, setLoading] = useState(true);
   setTimeout(() => {
     setLoading(false);
-  }, 2000);
+  }, 0);
 
   return (
     <BrowserRouter>

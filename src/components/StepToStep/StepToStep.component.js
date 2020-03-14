@@ -1,28 +1,32 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from '../../utils/PropTypes';
 
 const StepToStep = ({ children }) => {
   const [step, setStep] = useState(0);
 
-  let childrenT;
-  if (children) {
-    if (!Array.isArray(children)) {
-      childrenT = [children];
-    } else {
-      childrenT = children;
-    }
-  }
+  const dots = children.length;
+  const childrenArray = Array.isArray(children) ? children : [children];
+
+  const toPrevStep = () => {
+    if (step > 0) setStep(step - 1);
+  };
+
+  const toNextStep = () => {
+    if (step < dots - 1) setStep(step + 1);
+  };
 
   return (
     <div className={classNames('steptostep_component')}>
-      {childrenT
-        ? React.cloneElement(childrenT[step], {
-            toStep: setStep,
-            toNextStep: () => setStep(step + 1),
-            toPrevStep: () => setStep(step - 1)
-          })
-        : 'No children'}
+      {children &&
+        React.cloneElement(childrenArray[step], {
+          key: step,
+          step,
+          dots,
+          toStep: setStep,
+          toNextStep,
+          toPrevStep
+        })}
     </div>
   );
 };
@@ -32,10 +36,7 @@ StepToStep.defaultProps = {
 };
 
 StepToStep.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ])
+  children: PropTypes.children
 };
 
 export default StepToStep;
