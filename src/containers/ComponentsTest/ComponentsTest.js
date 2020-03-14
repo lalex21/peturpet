@@ -31,8 +31,8 @@ const App = () => (
       <Step text="pruebita" />
       <Step text="pruebita2" />
     </StepToStep>
-    <div>Step To Step Error</div>
-    <StepToStep />
+    {/* <div>Step To Step Error</div> */}
+    {/* <StepToStep /> */}
     <div>Google Login</div>
     <GoogleLogin />
   </div>
