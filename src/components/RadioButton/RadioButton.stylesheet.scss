@@ -1,52 +1,61 @@
+@import '../../assets/stylesheets/variables';
+
 div.radiobutton_component {
-    &--option {
-        display: flex;
-        color: #9DA1AE;
-        font-family: 'Roboto';
-        font-size: 16px;
-        line-height: 21px;
+  display: flex;
+  justify-content: center;
 
-        & > input[type=radio] {
-            display: none;
-    
-            &:checked + div {
-                label {
-                    background: #FD9697;
-                    background-size: 8px;
-                    border: none;
-                    border-radius: 50%;
-                    display: inline-block;
-                    width: 8px;
-                    height: 8px;
-                }
-            }
-        }
+  &--option {
+    display: flex;
+    color: #9da1ae;
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 21px;
 
-        & > div {
-            background-color: #FFFFFF;
-            border-radius: 50%;
-            box-shadow: 0px 3px 6px #00000029;
-            margin-right: 6px;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-    
-            &:hover {
-                cursor: pointer;
-            }
-    
-            label {
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-        }
+    &:not(:last-child) {
+      margin-right: $spacing-xxl;
     }
+
+    & > input[type='radio'] {
+      display: none;
+
+      &:checked + div {
+        label {
+          background: #fd9697;
+          background-size: 8px;
+          border: none;
+          border-radius: 50%;
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+
+    & > div {
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0px 3px 6px #00000029;
+      margin-right: 6px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      label {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

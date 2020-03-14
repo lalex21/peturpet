@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { gapi, loadAuth2 } from 'gapi-script';
-import { ClientID as GoogleClientID } from '../../constants/Google/GoogleApi';
+import { ClientID as GoogleClientID } from '../../constants/AppParams';
 
 import Button from '../Button/Button.component';
 
 import './GoogleLogin.stylesheet.scss';
+import PropTypes from '../../utils/PropTypes';
+import { login, logout } from '../../actions/Auth/Auth.action';
 
 class GoogleLogin extends Component {
   constructor(props) {
@@ -37,8 +40,12 @@ class GoogleLogin extends Component {
     const auth2 = gapi.auth2.getAuthInstance();
 
     auth2.signOut().then(() => {
-      this.setState({ user: null });
-      console.log('User signed out.');
+      this.setState({ user: null }, () => {
+        const { googleLogout } = this.props;
+
+        console.log('User signed out.');
+        googleLogout();
+      });
     });
   };
 
@@ -59,20 +66,27 @@ class GoogleLogin extends Component {
     const name = currentUser.getBasicProfile().getName();
     const profileImg = currentUser.getBasicProfile().getImageUrl();
 
-    this.setState({
-      user: {
-        name,
-        profileImg
+    this.setState(
+      {
+        user: {
+          name,
+          profileImg
+        }
+      },
+      () => {
+        const { googleLogin } = this.props;
+        googleLogin();
       }
-    });
+    );
   }
 
   render() {
     const { user } = this.state;
+    const { isLogin } = this.props;
 
     return (
       <>
-        {user ? (
+        {user && isLogin ? (
           <Button
             text={`${user.name} logout`}
             className="primary"
@@ -88,6 +102,19 @@ class GoogleLogin extends Component {
   }
 }
 
-GoogleLogin.propTypes = {};
+GoogleLogin.propTypes = {
+  isLogin: PropTypes.bool.isRequired,
+  googleLogin: PropTypes.func.isRequired,
+  googleLogout: PropTypes.func.isRequired
+};
 
-export default GoogleLogin;
+const mapStateToProps = state => ({
+  isLogin: state.auth.isLogin
+});
+
+const mapDispatchToProps = dispatch => ({
+  googleLogin: () => dispatch(login()),
+  googleLogout: () => dispatch(logout())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(GoogleLogin);

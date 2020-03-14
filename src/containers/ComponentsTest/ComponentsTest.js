@@ -13,16 +13,15 @@ const App = () => (
     <div>Primary</div>
     <Button
       className="primary"
-      text="Continúa"
       onClick={() => console.log('testxxx')}
       icon="paw"
-    />
+    >
+      Continúa
+    </Button>
     <div>Secondary</div>
-    <Button
-      className="secondary"
-      text="Continúa 2"
-      onClick={() => console.log('testxxx')}
-    />
+    <Button className="secondary" onClick={() => console.log('testxxx')}>
+      Continúa 2
+    </Button>
     <div>Input</div>
     <Input placeholder="prueba" />
     <div>Input Error</div>
@@ -32,8 +31,8 @@ const App = () => (
       <Step text="pruebita" />
       <Step text="pruebita2" />
     </StepToStep>
-    <div>Step To Step Error</div>
-    <StepToStep />
+    {/* <div>Step To Step Error</div> */}
+    {/* <StepToStep /> */}
     <div>Google Login</div>
     <GoogleLogin />
   </div>
