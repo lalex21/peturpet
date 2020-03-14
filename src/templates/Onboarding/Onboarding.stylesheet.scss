@@ -21,21 +21,29 @@
   }
 
   &--description {
-    @extend .ff-Roboto-Bold;
-    color: white;
-    font-size: 17px;
-    margin: $spacing-m 0;
-  }
-
-  &--continue {
-    margin-bottom: $spacing-s;
-  }
-
-  &--login {
+    margin: $spacing-s 10px;
     p {
       @extend .ff-Roboto-Bold;
       color: white;
       font-size: 17px;
+    }
+  }
+
+  &--dots_step {
+    margin-bottom: $spacing-s;
+  }
+
+  &--continue {
+    margin: 0 10px;
+    margin-bottom: $spacing-s;
+  }
+
+  &--login {
+    margin: 0 10px;
+    p {
+      @extend .ff-Roboto;
+      color: white;
+      font-size: 14px;
       span {
         color: #efa0ab;
         text-decoration: underline;

@@ -4,16 +4,24 @@ import PropTypes from '../../utils/PropTypes';
 
 const StepToStep = ({ children }) => {
   const [step, setStep] = useState(0);
+  const [prevStep, setPrevStep] = useState();
 
-  const dots = children.length;
+  const dots = children && children.length;
   const childrenArray = Array.isArray(children) ? children : [children];
 
+  const toStep = stp => {
+    if (stp !== step) {
+      setPrevStep(step);
+      setStep(stp);
+    }
+  };
+
   const toPrevStep = () => {
-    if (step > 0) setStep(step - 1);
+    if (step > 0) toStep(step - 1);
   };
 
   const toNextStep = () => {
-    if (step < dots - 1) setStep(step + 1);
+    if (step < dots - 1) toStep(step + 1);
   };
 
   return (
@@ -22,8 +30,9 @@ const StepToStep = ({ children }) => {
         React.cloneElement(childrenArray[step], {
           key: step,
           step,
+          prevStep,
           dots,
-          toStep: setStep,
+          toStep,
           toNextStep,
           toPrevStep
         })}

@@ -13,20 +13,25 @@ import { ReactComponent as LogoPetUrPet } from '../../assets/images/LOGO.svg';
 import './Onboarding.stylesheet.scss';
 
 const container = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0.5 },
   visible: {
     opacity: 1,
     transition: {
+      duration: 0.8,
+      ease: 'easeOut'
       // delay: 0.3
     }
   }
 };
 
 const item = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
     transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0,
+      duration: 0
       // delay: 0.7
     }
   }
@@ -37,6 +42,7 @@ const Onboardingtemplate = ({
   description,
   backgroundColor,
   step,
+  prevStep,
   dots,
   toStep,
   toNextStep,
@@ -59,17 +65,18 @@ const Onboardingtemplate = ({
             <Col sm={12} className="onboarding_template--content">
               {children}
             </Col>
+            <Col sm={12} className="onboarding_template--description">
+              <p>{description}</p>
+            </Col>
             <Col sm={12} className="onboarding_template--dots_step">
               <DotStep
                 step={step}
+                prevStep={prevStep}
                 dots={dots}
                 toStep={toStep}
                 toPrevStep={toPrevStep}
                 toNextStep={toNextStep}
               />
-            </Col>
-            <Col sm={12} className="onboarding_template--description">
-              <p>{description}</p>
             </Col>
             <Col sm={12} className="onboarding_template--continue">
               <Button className="primary" onClick={toNextStep}>
@@ -101,6 +108,7 @@ Onboardingtemplate.propTypes = {
   description: PropTypes.string,
   backgroundColor: PropTypes.string,
   step: PropTypes.number.isRequired,
+  prevStep: PropTypes.number.isRequired,
   dots: PropTypes.number.isRequired,
   toStep: PropTypes.func.isRequired,
   toNextStep: PropTypes.func.isRequired,

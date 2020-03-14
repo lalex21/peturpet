@@ -1,0 +1,19 @@
+@import '../../assets/stylesheets/variables';
+
+.dot_step_component {
+  .dot_component {
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin: 0 3px;
+
+    &--active {
+      background-color: #fec9be;
+    }
+  }
+}
