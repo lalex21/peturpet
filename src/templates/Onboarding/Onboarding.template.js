@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Breakpoint } from 'react-socks';
 import PropTypes from '../../utils/PropTypes';
-import { Row, Col } from '../../components/Grid/Grid.component';
+import { Row, Col, Container } from '../../components/Grid/Grid.component';
 
 import Layout from '../Layout/Layout.template';
 import DotStep from '../../components/DotStep/DotStep.component';
@@ -25,14 +26,12 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 1 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0,
-      duration: 0
-      // delay: 0.7
+      duration: 0.5,
+      ease: 'backOut'
     }
   }
 };
@@ -48,7 +47,18 @@ const Onboardingtemplate = ({
   toNextStep,
   toPrevStep
 }) => {
-  console.log('Onboardingtemplate', step);
+  const RenderChildren = ({ col, breakpoints }) => (
+    /* eslint-disable-next-line react/jsx-props-no-spreading */
+    <Col {...col}>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Breakpoint {...breakpoints}>
+        <div className="onboarding_template--content">
+          <motion.div variants={item}>{children}</motion.div>
+        </div>
+      </Breakpoint>
+    </Col>
+  );
+
   return (
     <motion.div variants={container} initial="hidden" animate="visible">
       <Layout
@@ -57,42 +67,57 @@ const Onboardingtemplate = ({
         className="onboarding_template"
         style={{ backgroundColor }}
       >
-        <motion.div variants={item}>
-          <Row>
-            <Col className="onboarding_template--logo">
-              <LogoPetUrPet />
-            </Col>
-            <Col sm={12} className="onboarding_template--content">
-              {children}
-            </Col>
-            <Col sm={12} className="onboarding_template--description">
-              <p>{description}</p>
-            </Col>
-            <Col sm={12} className="onboarding_template--dots_step">
-              <DotStep
-                step={step}
-                prevStep={prevStep}
-                dots={dots}
-                toStep={toStep}
-                toPrevStep={toPrevStep}
-                toNextStep={toNextStep}
-              />
-            </Col>
-            <Col sm={12} className="onboarding_template--continue">
-              <Button className="primary" onClick={toNextStep}>
-                Continúa
-              </Button>
-            </Col>
-            <Col sm={12} className="onboarding_template--login">
-              <LinkComponent>
-                <p>
-                  ¿Ya tienes una cuenta?&nbsp;
-                  <span>Iniciar sesión</span>
-                </p>
-              </LinkComponent>
-            </Col>
-          </Row>
-        </motion.div>
+        <Row>
+          <RenderChildren
+            col={{ md: 6 }}
+            breakpoints={{ md: true, up: true }}
+          />
+          <Col sm={12} md={6} xl={{ offset: 1, span: 4 }}>
+            <Container fluid className="onboarding_template_container">
+              <Row>
+                <Col sm={12} className="onboarding_template_container--logo">
+                  <LogoPetUrPet />
+                </Col>
+                <RenderChildren breakpoints={{ sm: true, down: true }} />
+                <Col
+                  sm={12}
+                  className="onboarding_template_container--description"
+                >
+                  <p>{description}</p>
+                </Col>
+                <Col
+                  sm={12}
+                  className="onboarding_template_container--dots_step"
+                >
+                  <DotStep
+                    step={step}
+                    prevStep={prevStep}
+                    dots={dots}
+                    toStep={toStep}
+                    toPrevStep={toPrevStep}
+                    toNextStep={toNextStep}
+                  />
+                </Col>
+                <Col
+                  md={12}
+                  className="onboarding_template_container--continue"
+                >
+                  <Button className="primary" onClick={toNextStep}>
+                    Continúa
+                  </Button>
+                </Col>
+                <Col sm={12} className="onboarding_template_container--login">
+                  <LinkComponent>
+                    <p>
+                      ¿Ya tienes una cuenta?&nbsp;
+                      <span>Iniciar sesión</span>
+                    </p>
+                  </LinkComponent>
+                </Col>
+              </Row>
+            </Container>
+          </Col>
+        </Row>
       </Layout>
     </motion.div>
   );

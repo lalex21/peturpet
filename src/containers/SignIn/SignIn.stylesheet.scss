@@ -1,0 +1,32 @@
+@import '../../assets/stylesheets/variables';
+
+.sign_in_container {
+  &--bubble {
+    overflow: hidden;
+    border-radius: 100%;
+    margin: 0 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    // flex: 0.85;
+    width: 295px;
+    height: 295px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      width: 326px;
+      height: 326px;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      width: 360px;
+      height: 360px;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}

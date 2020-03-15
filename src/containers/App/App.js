@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loadAuth2 } from 'gapi-script';
 import { AnimatePresence } from 'framer-motion';
+import { setDefaultBreakpoints } from 'react-socks';
 
 import { ClientID as GoogleClientID } from '../../constants/AppParams';
 
@@ -14,6 +15,14 @@ import { login as loginAction } from '../../actions/Auth/Auth.action';
 import { hideLoading as hideLoadingAction } from '../../actions/Application/Application.action';
 
 import '../../assets/stylesheets/index.scss';
+
+setDefaultBreakpoints([
+  { xs: 0 },
+  { sm: 576 },
+  { md: 768 },
+  { lg: 992 },
+  { xl: 1200 }
+]);
 
 // import Layout from '../../components/Layout/Layout.component';
 // import Header from '../Header/Header.component';

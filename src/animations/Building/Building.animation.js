@@ -555,7 +555,7 @@ const BuildingAnimation = () => {
         </g>
       </svg> */}
 
-      <Breakpoint medium up style={{ position: 'absolute' }}>
+      <Breakpoint md up style={{ position: 'absolute' }}>
         <motion.svg
           width="133.869"
           height="165.563"

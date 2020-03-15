@@ -12,5 +12,10 @@ export default {
   ]),
   style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   stringOrNumber: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  animation: PropTypes.shape({
+    initial: PropTypes.objectOf([PropTypes.string, PropTypes.number]),
+    animate: PropTypes.objectOf([PropTypes.string, PropTypes.number]),
+    transition: PropTypes.objectOf([PropTypes.string, PropTypes.number])
+  }),
   ...PropTypes
 };
