@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "08d175bd4fd69110cc38d2e2125b8785",
+    "revision": "6f83e7afd750dca1c7e08154a47cf5e1",
     "url": "https://lalex21.github.io/peturpet/index.html"
   },
   {
-    "revision": "50a2f1283af06a088ca3",
+    "revision": "95b512bbc316edfd191d",
     "url": "https://lalex21.github.io/peturpet/static/css/main.6a4a7391.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://lalex21.github.io/peturpet/static/js/2.5162b68d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "50a2f1283af06a088ca3",
-    "url": "https://lalex21.github.io/peturpet/static/js/main.861359d0.chunk.js"
+    "revision": "95b512bbc316edfd191d",
+    "url": "https://lalex21.github.io/peturpet/static/js/main.22c39490.chunk.js"
   },
   {
     "revision": "748b06540ad90ed55324",
