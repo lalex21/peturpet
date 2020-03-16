@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://lalex21.github.io/peturpet/static/css/main.9a63eefa.chunk.css",
-    "main.js": "https://lalex21.github.io/peturpet/static/js/main.fa71ae75.chunk.js",
-    "main.js.map": "https://lalex21.github.io/peturpet/static/js/main.fa71ae75.chunk.js.map",
+    "main.js": "https://lalex21.github.io/peturpet/static/js/main.feee9241.chunk.js",
+    "main.js.map": "https://lalex21.github.io/peturpet/static/js/main.feee9241.chunk.js.map",
     "runtime-main.js": "https://lalex21.github.io/peturpet/static/js/runtime-main.7ce014ec.js",
     "runtime-main.js.map": "https://lalex21.github.io/peturpet/static/js/runtime-main.7ce014ec.js.map",
     "static/js/2.c657a2a6.chunk.js": "https://lalex21.github.io/peturpet/static/js/2.c657a2a6.chunk.js",
     "static/js/2.c657a2a6.chunk.js.map": "https://lalex21.github.io/peturpet/static/js/2.c657a2a6.chunk.js.map",
     "index.html": "https://lalex21.github.io/peturpet/index.html",
-    "precache-manifest.dd0099618252b4d9c9e6cbef78d36ee4.js": "https://lalex21.github.io/peturpet/precache-manifest.dd0099618252b4d9c9e6cbef78d36ee4.js",
+    "precache-manifest.23597b9519aea65b33b91a705e1917a1.js": "https://lalex21.github.io/peturpet/precache-manifest.23597b9519aea65b33b91a705e1917a1.js",
     "service-worker.js": "https://lalex21.github.io/peturpet/service-worker.js",
     "static/css/main.9a63eefa.chunk.css.map": "https://lalex21.github.io/peturpet/static/css/main.9a63eefa.chunk.css.map",
     "static/js/2.c657a2a6.chunk.js.LICENSE.txt": "https://lalex21.github.io/peturpet/static/js/2.c657a2a6.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.7ce014ec.js",
     "static/js/2.c657a2a6.chunk.js",
     "static/css/main.9a63eefa.chunk.css",
-    "static/js/main.fa71ae75.chunk.js"
+    "static/js/main.feee9241.chunk.js"
   ]
 }
