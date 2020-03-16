@@ -1,0 +1,35 @@
+@import '../../assets/stylesheets/variables';
+
+.login_container {
+    text-align: center;
+    
+    &--step-col,
+    &--email-col {
+        margin-bottom: $spacing-xl;
+    }
+
+    &--password-col {
+        margin-bottom: $spacing-l;
+    }
+
+    &--remember-col {
+        margin-bottom: $spacing-l;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &--continue-col {
+        margin-bottom: $spacing-s;
+    }
+
+    &--alternative-col {
+        margin-bottom: $spacing-xl;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            margin-right: $spacing-m;
+        }
+    }
+}
