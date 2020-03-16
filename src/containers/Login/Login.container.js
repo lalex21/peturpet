@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Breakpoint } from 'react-socks';
+import { motion } from 'framer-motion';
 import RouteAnimate from '../../animations/Route/Route.animation';
 // import StepWelcomeAnimation from '../../animations/SignIn/StepWelcome/StepWelcome.animation';
 import StepFinishAnimation from '../../animations/SignIn/StepFinish/StepFinish.animation';
@@ -10,50 +11,33 @@ import Input from '../../components/Input/Input.component';
 import LinkComponent from '../../components/Link/Link.component';
 import Checkbox from '../../components/Checkbox/Checkbox.component';
 import Button from '../../components/Button/Button.component';
-import GoogleLogin from '../../components/GoogleLogin/GoogleLogin.component';
-import FacebookLogin from '../../components/FacebookLogin/FacebookLogin.component';
+// import GoogleLogin from '../../components/GoogleLogin/GoogleLogin.component';
+// import FacebookLogin from '../../components/FacebookLogin/FacebookLogin.component';
 import { ReactComponent as LogoPetUrPet } from '../../assets/images/LOGO.svg';
 
 import './Login.stylesheet.scss';
 
 const LoginContainer = ({ routes }) => {
   console.log(routes);
-  //   <RouteAnimate>
-  // <LayoutTemplate className="login_container" full paw>
-  //   <Row>
-  //     <Col sm={12} className="login_container--step-col">
-  //       <StepWelcomeAnimation />
-  //     </Col>
-  //     <Col sm={12} className="login_container--email-col">
-  //       <Input placeholder="Tu correo" />
-  //     </Col>
-  //     <Col sm={12} className="login_container--password-col">
-  //       <Input placeholder="Tu contraseña" />
-  //     </Col>
-  //     <Col sm={12} className="login_container--remember-col">
-  //       <Checkbox name="Recordarme" />
-  //       <LinkComponent to={routes.ForgetPassword.path}>
-  //         ¿Olvidates tu contraseña?
-  //       </LinkComponent>
-  //     </Col>
-  //     <Col sm={12} className="login_container--continue-col">
-  //       <Button className="secondary">Vamos</Button>
-  //     </Col>
-  //     <Col sm={12} className="login_container--alternative-col">
-  //       <span>O inicia sesión con</span>
-  // <GoogleLogin />
-  // <FacebookLogin />
-  //     </Col>
-  //     <Col sm={12}>
-  //       <span>¿No tienes cuenta? </span>
-  //       <LinkComponent to={routes.SignIn.path}>Regístrate</LinkComponent>
-  //     </Col>
-  //   </Row>
-  // </LayoutTemplate>
-  // </RouteAnimate>
-  // eslint-disable-next-line no-unused-vars
+  const [checked, setChecked] = useState(false);
   const RenderBanner = () => (
-    <div
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 200,
+        scale: 0,
+        borderRadius: ['30%', '50%', '100%']
+      }}
+      animate={{
+        ease: 'easeInOut',
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        borderRadius: ['0', '0', '40px', '40px']
+      }}
+      transition={{
+        duration: 0.25
+      }}
       className="login_container--bubble"
       style={{
         backgroundColor: '#BFC6FF'
@@ -65,7 +49,7 @@ const LoginContainer = ({ routes }) => {
       <div className="login_container--bubble-content">
         <StepFinishAnimation />
       </div>
-    </div>
+    </motion.div>
   );
 
   return (
@@ -78,7 +62,20 @@ const LoginContainer = ({ routes }) => {
       >
         <Row>
           <Col sm={12}>
-            <form className="login_container--form">
+            <motion.form
+              initial={{
+                opacity: 0,
+                y: 100
+              }}
+              animate={{
+                opacity: 1,
+                y: 0
+              }}
+              transition={{
+                duration: 0.5
+              }}
+              className="login_container--form"
+            >
               <Row>
                 <Col sm={12}>
                   <Breakpoint md up>
@@ -86,15 +83,23 @@ const LoginContainer = ({ routes }) => {
                   </Breakpoint>
                 </Col>
                 <Col sm={12} className="login_container--form-input">
-                  <Input placeholder="Tu correo" />
+                  <Input
+                    type="email"
+                    placeholder="Tu correo"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  />
                 </Col>
                 <Col sm={12} className="login_container--form-input">
-                  <Input placeholder="Tu contraseña" />
+                  <Input type="password" placeholder="Tu contraseña" />
                 </Col>
                 <Col sm={12}>
                   <div className="login_container--form-info">
                     <div className="login_container--form-info-checkbox">
-                      <Checkbox name="Recordarme" />
+                      <Checkbox
+                        label="Recordarme"
+                        checked={checked}
+                        onChange={() => setChecked(!checked)}
+                      />
                     </div>
                     <div className="login_container--form-info-link">
                       <LinkComponent to="/recover-password">
@@ -113,13 +118,13 @@ const LoginContainer = ({ routes }) => {
                     Vamos
                   </Button>
                 </Col>
-                <Col sm={12}>
+                {/* <Col sm={12}>
                   <div className="login_container--form-alternatives">
                     <p>O inicia sesión con</p>
                     <GoogleLogin />
                     <FacebookLogin />
                   </div>
-                </Col>
+                </Col> */}
                 <Col sm={12}>
                   <div className="login_container--form-signin">
                     <LinkComponent to="/building">
@@ -131,7 +136,7 @@ const LoginContainer = ({ routes }) => {
                   </div>
                 </Col>
               </Row>
-            </form>
+            </motion.form>
           </Col>
         </Row>
       </LayoutTemplate>
