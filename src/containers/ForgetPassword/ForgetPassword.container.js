@@ -17,7 +17,7 @@ const ForgotPasswordContainer = ({ routes }) => {
 
   return (
     <LayoutTemplate className="forgetpassword_container" full center>
-      <h1 className="forgetpassword_container--title">
+      <h1 className="forgetpassword_container--title bold">
         ¿Olvidaste tu contraseña?
       </h1>
       <p className="forgetpassword_container--description">
