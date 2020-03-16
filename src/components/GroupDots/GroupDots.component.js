@@ -5,7 +5,7 @@ import Dots from '../../animations/frames/Dots/Dots.framer';
 const GroupDotsComponent = ({ right, left, ...props }) => {
   const transition = {
     duration: 1.6,
-    delay: 0.3
+    delay: 0.15
   };
 
   const variantsDotRight = {

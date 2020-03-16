@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from '../../utils/PropTypes';
 
 import RouteAnimate from '../../animations/Route/Route.animation';
@@ -13,46 +13,34 @@ import GroupDots from '../../components/GroupDots/GroupDots.component';
 
 import './SignIn.stylesheet.scss';
 
-const SignInContainer = ({ routes, ...props }) => {
-  console.log('routes_props', props, routes);
+const SignInContainer = () => {
+  const stepDots = [
+    [5, -80],
+    [-110, 110],
+    [-20, -110]
+  ];
 
-  const StepWelcomeDots = {
+  const mapStepDots = (step, prevStep) => ({
     right: {
-      init: -80,
-      to: -80
+      init: stepDots[prevStep][1],
+      to: stepDots[step][1]
     },
     left: {
-      init: 5,
-      to: 5
+      init: stepDots[prevStep][0],
+      to: stepDots[step][0]
     }
-  };
+  });
 
-  const StepServicesDots = {
-    right: {
-      init: -80,
-      to: 20
-    },
-    left: {
-      init: 5,
-      to: -80
-    }
-  };
+  const [variations, setVariations] = useState(mapStepDots(0, 0));
 
-  const StepFinishDots = {
-    right: {
-      init: -80,
-      to: 80
-    },
-    left: {
-      init: 5,
-      to: -110
-    }
+  const onChangeViewHandle = (step, prevStep) => {
+    setVariations(mapStepDots(step, prevStep));
   };
 
   return (
     <RouteAnimate outVariant={{ opacity: 1 }}>
       <div className="sign_in_container">
-        <StepToStep>
+        <StepToStep onChangeView={onChangeViewHandle}>
           <Onboarding
             backgroundColor="#EDC27B"
             description="Bienvenido a Pet ur Pet, para aquellos que aman a sus mascotas"
@@ -65,7 +53,7 @@ const SignInContainer = ({ routes, ...props }) => {
             >
               <StepWelcomeAnimation />
             </div>
-            <GroupDots {...StepWelcomeDots} />
+            <GroupDots {...variations} />
           </Onboarding>
           <Onboarding
             backgroundColor="#BFC6FF"
@@ -78,7 +66,7 @@ const SignInContainer = ({ routes, ...props }) => {
               }}
             >
               <StepServicesAnimation />
-              <GroupDots {...StepServicesDots} />
+              <GroupDots {...variations} />
             </div>
           </Onboarding>
           <Onboarding
@@ -92,7 +80,7 @@ const SignInContainer = ({ routes, ...props }) => {
               }}
             >
               <StepFinishAnimation />
-              <GroupDots {...StepFinishDots} />
+              <GroupDots {...variations} />
             </div>
           </Onboarding>
         </StepToStep>

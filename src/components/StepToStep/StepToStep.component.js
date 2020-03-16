@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from '../../utils/PropTypes';
 
-const StepToStep = ({ children }) => {
+const StepToStep = ({ children, onChangeView }) => {
   const [step, setStep] = useState(0);
   const [prevStep, setPrevStep] = useState();
 
@@ -13,6 +13,9 @@ const StepToStep = ({ children }) => {
     if (stp !== step) {
       setPrevStep(step);
       setStep(stp);
+    }
+    if (typeof onChangeView === 'function') {
+      onChangeView(stp, step);
     }
   };
 
@@ -41,11 +44,13 @@ const StepToStep = ({ children }) => {
 };
 
 StepToStep.defaultProps = {
-  children: undefined
+  children: undefined,
+  onChangeView: undefined
 };
 
 StepToStep.propTypes = {
-  children: PropTypes.children
+  children: PropTypes.children,
+  onChangeView: PropTypes.func
 };
 
 export default StepToStep;
