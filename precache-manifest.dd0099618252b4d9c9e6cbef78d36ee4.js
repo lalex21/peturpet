@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ad2930e152eaea3f731c9d05a00af73d",
+    "revision": "389645af3ea929a9d493e716ec7aed88",
     "url": "https://lalex21.github.io/peturpet/index.html"
   },
   {
-    "revision": "083d5b88bf9b68b7a158",
-    "url": "https://lalex21.github.io/peturpet/static/css/main.6a4a7391.chunk.css"
+    "revision": "3bb2dac2801732b165ea",
+    "url": "https://lalex21.github.io/peturpet/static/css/main.9a63eefa.chunk.css"
   },
   {
-    "revision": "289593f7f8c13e0948bc",
-    "url": "https://lalex21.github.io/peturpet/static/js/2.5162b68d.chunk.js"
+    "revision": "6ff272bc99e20d49a864",
+    "url": "https://lalex21.github.io/peturpet/static/js/2.c657a2a6.chunk.js"
   },
   {
     "revision": "283e247fcd70152d45e39e6e5a17cbed",
-    "url": "https://lalex21.github.io/peturpet/static/js/2.5162b68d.chunk.js.LICENSE.txt"
+    "url": "https://lalex21.github.io/peturpet/static/js/2.c657a2a6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "083d5b88bf9b68b7a158",
-    "url": "https://lalex21.github.io/peturpet/static/js/main.d38d9484.chunk.js"
+    "revision": "3bb2dac2801732b165ea",
+    "url": "https://lalex21.github.io/peturpet/static/js/main.fa71ae75.chunk.js"
   },
   {
     "revision": "748b06540ad90ed55324",
@@ -42,10 +42,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d8b6ad77078d45b5c8233d75f3c1d36a",
     "url": "https://lalex21.github.io/peturpet/static/media/bg.d8b6ad77.png"
-  },
-  {
-    "revision": "8cc4c9ea0a6d966251b1fcdbe4438d69",
-    "url": "https://lalex21.github.io/peturpet/static/media/facebook.8cc4c9ea.svg"
   },
   {
     "revision": "81ad048ed858673aaca6cc2227076b8a",
