@@ -15,7 +15,10 @@
     }
 
     &--description {
+      display: flex;
+      align-items: center;
       margin: $spacing-s 10px;
+      min-height: 60px;
       p {
         @extend .ff-Roboto-Bold;
         color: white;
@@ -47,6 +50,7 @@
 
     @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
       &--description {
+        min-height: 0;
         p {
           font-size: 15px;
         }
@@ -54,6 +58,10 @@
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
       &--logo {
         svg {
           width: 62%;
@@ -97,22 +105,5 @@
     justify-content: center;
     align-content: center;
     margin: $spacing-xs 0;
-  }
-
-  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-    position: relative;
-    z-index: 1;
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0.2;
-      z-index: -1;
-      background-image: url(../../assets/images/huellitas.png);
-      background-size: cover;
-    }
   }
 }

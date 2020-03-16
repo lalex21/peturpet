@@ -62,6 +62,7 @@ const Onboardingtemplate = ({
   return (
     <motion.div variants={container} initial="hidden" animate="visible">
       <Layout
+        paw
         full
         center
         className="onboarding_template"

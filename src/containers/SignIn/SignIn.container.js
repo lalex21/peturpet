@@ -7,6 +7,7 @@ import StepToStep from '../../components/StepToStep/StepToStep.component';
 import StepFinishAnimation from '../../animations/SignIn/StepFinish/StepFinish.animation';
 import StepWelcomeAnimation from '../../animations/SignIn/StepWelcome/StepWelcome.animation';
 import StepServicesAnimation from '../../animations/SignIn/StepServices/StepServices.animation';
+import Dots from '../../animations/frames/Dots/Dots.framer';
 // import LinkComponent from '../../components/Link/Link.component';
 
 import './SignIn.stylesheet.scss';
@@ -57,6 +58,12 @@ const SignInContainer = ({ routes }) => {
             </div>
           </Onboarding>
         </StepToStep>
+        <div className="sign_in_container--dots sign_in_container--dots-left">
+          <Dots />
+        </div>
+        <div className="sign_in_container--dots sign_in_container--dots-right">
+          <Dots />
+        </div>
       </div>
     </RouteAnimate>
   );

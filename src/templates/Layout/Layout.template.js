@@ -5,7 +5,7 @@ import { Container } from '../../components/Grid/Grid.component';
 
 import './Layout.stylesheet.scss';
 
-const LayoutTemplate = ({ children, className, style, center, full }) => {
+const LayoutTemplate = ({ children, className, style, center, full, paw }) => {
   return (
     <article
       style={style}
@@ -13,7 +13,8 @@ const LayoutTemplate = ({ children, className, style, center, full }) => {
         'layout_template',
         {
           'layout_template--full_screen': full,
-          'layout_template--center': center
+          'layout_template--center': center,
+          'layout_template--paw': paw
         },
         className
       )}
@@ -28,12 +29,14 @@ LayoutTemplate.propTypes = {
   style: PropTypes.style,
   className: PropTypes.string,
   center: PropTypes.bool,
-  full: PropTypes.bool
+  full: PropTypes.bool,
+  paw: PropTypes.bool
 };
 
 LayoutTemplate.defaultProps = {
   center: false,
   full: false,
+  paw: false,
   className: '',
   style: {}
 };
