@@ -2,6 +2,7 @@
 
 .layout_template {
   display: flex;
+  flex-direction: column;
 
   &--full_screen {
     height: 100%;

@@ -1,9 +1,10 @@
 .googlelogin_component {
   width: 48px;
-  height: 47px;
+  height: 48px;
   background: none;
   border: none;
   border-radius: 60px;
+  box-shadow: 0px 2px 3px 0px #0000001a;
 
   &:focus {
     outline: none;

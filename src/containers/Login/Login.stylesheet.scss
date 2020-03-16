@@ -1,35 +1,102 @@
 @import '../../assets/stylesheets/variables';
 
 .login_container {
-    text-align: center;
-    
-    &--step-col,
-    &--email-col {
-        margin-bottom: $spacing-xl;
+  &--bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 40px 40px;
+    // min-height: 290px;
+    // max-height: 290px;
+    overflow: hidden;
+    margin-bottom: 2px;
+
+    &-logo {
+      padding-top: 8px;
+      svg {
+        width: 151px;
+      }
     }
 
-    &--password-col {
-        margin-bottom: $spacing-l;
+    &-content {
+      margin-bottom: -65px;
+    }
+  }
+
+  &--form {
+    margin: 0 8px;
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px 0;
+
+      &-checkbox {
+      }
+
+      &-link {
+        text-decoration: underline;
+      }
     }
 
-    &--remember-col {
-        margin-bottom: $spacing-l;
-        display: flex;
-        justify-content: space-between;
+    &-input {
+      margin-bottom: 2px;
     }
 
-    &--continue-col {
-        margin-bottom: $spacing-s;
+    &-button {
+      width: 100%;
+      height: 45px;
     }
 
-    &--alternative-col {
-        margin-bottom: $spacing-xl;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        span {
-            margin-right: $spacing-m;
-        }
+    &-alternatives {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9da1ae;
+      font-weight: 500;
+      padding: 13px 0;
     }
+
+    &-signin {
+      padding: 15px 0;
+      border-top: 1px solid #f6f7f9;
+      text-align: center;
+      color: #9da1ae;
+      font-weight: 500;
+      span {
+        color: #fd9697;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // &--step-col,
+  // &--email-col {
+  //     margin-bottom: $spacing-xl;
+  // }
+
+  // &--password-col {
+  //     margin-bottom: $spacing-l;
+  // }
+
+  // &--remember-col {
+  //     margin-bottom: $spacing-l;
+  //     display: flex;
+  //     justify-content: space-between;
+  // }
+
+  // &--continue-col {
+  //     margin-bottom: $spacing-s;
+  // }
+
+  // &--alternative-col {
+  //     margin-bottom: $spacing-xl;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+
+  //     span {
+  //         margin-right: $spacing-m;
+  //     }
+  // }
 }
