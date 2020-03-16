@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
 
+export const BUTTON_TYPES = ['primary', 'secundary', 'empty'];
+export const BUTTON_SIZES = ['small', 'medium', 'large'];
+
 export default {
   children: PropTypes.oneOfType([
     PropTypes.element,
@@ -18,5 +21,7 @@ export default {
     transition: PropTypes.objectOf([PropTypes.string, PropTypes.number]),
     variants: PropTypes.objectOf([PropTypes.string, PropTypes.number])
   }),
+  button: PropTypes.oneOf(BUTTON_TYPES),
+  buttonSizes: PropTypes.oneOf(BUTTON_SIZES),
   ...PropTypes
 };

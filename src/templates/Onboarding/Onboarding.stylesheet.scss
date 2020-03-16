@@ -33,6 +33,9 @@
     &--continue {
       margin: 0 10px;
       margin-bottom: $spacing-s;
+      .button_component {
+        width: 100%;
+      }
     }
 
     &--login {

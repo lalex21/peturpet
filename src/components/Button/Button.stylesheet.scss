@@ -1,47 +1,148 @@
+// .button_component {
+//   height: 45px;
+//   width: 100%;
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background: none;
+//   border: none;
+//   border-radius: 60px;
+//   color: #ffffff;
+//   font-family: 'Roboto';
+//   font-size: 17px;
+//   line-height: 21px;
+
+//   a {
+//     width: 100%;
+//     color: #ffffff;
+//   }
+
+//   &:focus {
+//     outline: none;
+//   }
+
+//   &:hover {
+//     cursor: pointer;
+//   }
+
+//   &.primary {
+//     background-color: #fd9697;
+//   }
+
+//   &.secondary {
+//     background-color: #5a48a3;
+//   }
+
+//   i {
+//     width: 19.8px;
+//     height: 19.8px;
+//     position: absolute;
+//     right: 0;
+//   }
+
+//   i.paw {
+//     background: url('../../assets/icons/paw.svg') no-repeat top left;
+//   }
+// }
+@import '../../assets/stylesheets/variables';
+
 .button_component {
-  height: 45px;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: none;
-  border: none;
-  border-radius: 60px;
-  color: #ffffff;
   font-family: 'Roboto';
-  font-size: 17px;
-  line-height: 21px;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 60px;
+  // border: 1px solid transparent;
+  border: none;
+  padding: $spacing-xxs $spacing-xs;
 
-  a {
-    width: 100%;
-    color: #ffffff;
+  &--btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      &.icon-right {
+        margin-right: $spacing-xs;
+      }
+      &.icon-left {
+        margin-left: $spacing-xs;
+      }
+    }
   }
 
-  &:focus {
-    outline: none;
+  &--medium {
+    padding: $spacing-xs $spacing-m;
+    font-size: 17px;
   }
 
-  &:hover {
-    cursor: pointer;
+  &--large {
+    padding: $spacing-s $spacing-m;
+    font-size: 17px;
   }
 
-  &.primary {
-    background-color: #fd9697;
-  }
-
-  &.secondary {
+  &--primary {
+    &,
+    &--btn .icon {
+      color: #ffffff;
+    }
+    // border-color: #5A48A3;
     background-color: #5a48a3;
+    &:hover {
+      background-color: #6a5bab;
+      // border-color: #6a5bab;
+    }
+    &:active {
+      background-color: #5e4da8;
+      // border-color: #5e4da8;
+    }
   }
-
-  i {
-    width: 19.8px;
-    height: 19.8px;
-    position: absolute;
-    right: 0;
+  &--secundary {
+    &,
+    &--btn .icon {
+      color: #ffffff;
+    }
+    // border-color: #FD9697;
+    background-color: #fd9697;
+    &:active,
+    &:hover {
+      // color: $primary-100;
+      background-color: #ffa6a7;
+    }
   }
+  &:disabled {
+    cursor: not-allowed;
+    color: #666666;
+    background-color: #cccccc;
+    // border-color: $neutral-200;
+  }
+  &--empty {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: contents;
+  }
+  &--no-children {
+    .button_component--btn {
+      .icon {
+        margin-right: 0;
+      }
+    }
+  }
+  &--paw {
+    position: relative;
+    overflow: hidden;
+    &-icon {
+      position: absolute;
+      padding: 0 $spacing-s;
+      right: 0;
+      top: 0;
+      height: 100%;
 
-  i.paw {
-    background: url('../../assets/icons/paw.svg') no-repeat top left;
+      svg {
+        height: 100%;
+      }
+    }
   }
 }
