@@ -6,6 +6,8 @@ import RouteAnimate from '../../animations/Route/Route.animation';
 import StepFinishAnimation from '../../animations/SignIn/StepFinish/StepFinish.animation';
 import LayoutTemplate from '../../templates/Layout/Layout.template';
 
+// import Dots from '../../animations/frames/Dots/Dots.framer';
+
 import { Row, Col } from '../../components/Grid/Grid.component';
 import Input from '../../components/Input/Input.component';
 import LinkComponent from '../../components/Link/Link.component';
