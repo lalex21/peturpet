@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "https://lalex21.github.io/peturpet/static/css/main.fe954124.chunk.css",
-    "main.js": "https://lalex21.github.io/peturpet/static/js/main.cc81f683.chunk.js",
-    "main.js.map": "https://lalex21.github.io/peturpet/static/js/main.cc81f683.chunk.js.map",
+    "main.css": "https://lalex21.github.io/peturpet/static/css/main.9a63eefa.chunk.css",
+    "main.js": "https://lalex21.github.io/peturpet/static/js/main.adcc3637.chunk.js",
+    "main.js.map": "https://lalex21.github.io/peturpet/static/js/main.adcc3637.chunk.js.map",
     "runtime-main.js": "https://lalex21.github.io/peturpet/static/js/runtime-main.7ce014ec.js",
     "runtime-main.js.map": "https://lalex21.github.io/peturpet/static/js/runtime-main.7ce014ec.js.map",
     "static/js/2.039bbee0.chunk.js": "https://lalex21.github.io/peturpet/static/js/2.039bbee0.chunk.js",
     "static/js/2.039bbee0.chunk.js.map": "https://lalex21.github.io/peturpet/static/js/2.039bbee0.chunk.js.map",
     "index.html": "https://lalex21.github.io/peturpet/index.html",
-    "precache-manifest.479da8bd456533130621bc5a88fb9dfd.js": "https://lalex21.github.io/peturpet/precache-manifest.479da8bd456533130621bc5a88fb9dfd.js",
+    "precache-manifest.5d27f223f979c9ba31e61b1574e0f3c3.js": "https://lalex21.github.io/peturpet/precache-manifest.5d27f223f979c9ba31e61b1574e0f3c3.js",
     "service-worker.js": "https://lalex21.github.io/peturpet/service-worker.js",
-    "static/css/main.fe954124.chunk.css.map": "https://lalex21.github.io/peturpet/static/css/main.fe954124.chunk.css.map",
+    "static/css/main.9a63eefa.chunk.css.map": "https://lalex21.github.io/peturpet/static/css/main.9a63eefa.chunk.css.map",
     "static/js/2.039bbee0.chunk.js.LICENSE.txt": "https://lalex21.github.io/peturpet/static/js/2.039bbee0.chunk.js.LICENSE.txt",
     "static/media/LOGO.d81aff78.svg": "https://lalex21.github.io/peturpet/static/media/LOGO.d81aff78.svg",
     "static/media/Splash.stylesheet.scss": "https://lalex21.github.io/peturpet/static/media/bg.d8b6ad77.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.7ce014ec.js",
     "static/js/2.039bbee0.chunk.js",
-    "static/css/main.fe954124.chunk.css",
-    "static/js/main.cc81f683.chunk.js"
+    "static/css/main.9a63eefa.chunk.css",
+    "static/js/main.adcc3637.chunk.js"
   ]
 }
