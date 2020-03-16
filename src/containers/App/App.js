@@ -54,13 +54,15 @@ setDefaultBreakpoints([
 // eslint-disable-next-line no-unused-vars
 const AppContainer = ({ auth, isLoading, login, hideLoading }) => {
   useEffect(() => {
-    loadAuth2(GoogleClientID, '')
-      .then(auth2 => {
-        if (auth2.isSignedIn.get()) {
-          login();
-        }
-      })
-      .finally(() => hideLoading());
+    setTimeout(() => {
+      loadAuth2(GoogleClientID, '')
+        .then(auth2 => {
+          if (auth2.isSignedIn.get()) {
+            login();
+          }
+        })
+        .finally(() => hideLoading());
+    }, 1000);
   });
 
   return (
