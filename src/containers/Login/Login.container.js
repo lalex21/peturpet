@@ -32,8 +32,8 @@ const LoginContainer = ({ routes }) => {
           </Col>
           <Col sm={12} className="login_container--remember-col">
             <Checkbox name="Recordarme" />
-            <LinkComponent to={routes.ForgetPassword.path}>
-              ¿Olvidates tu contraseña?
+            <LinkComponent to="/forgot-password">
+              ¿Olvidaste tu contraseña?
             </LinkComponent>
           </Col>
           <Col sm={12} className="login_container--continue-col">
@@ -46,7 +46,7 @@ const LoginContainer = ({ routes }) => {
           </Col>
           <Col sm={12}>
             <span>¿No tienes cuenta? </span>
-            <LinkComponent to={routes.SignIn.path}>Regístrate</LinkComponent>
+            <LinkComponent to="/sign-in">Regístrate</LinkComponent>
           </Col>
         </Row>
       </LayoutTemplate>

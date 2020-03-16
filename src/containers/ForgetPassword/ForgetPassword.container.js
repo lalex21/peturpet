@@ -31,7 +31,7 @@ const ForgotPasswordContainer = ({ routes }) => {
       <Button className="secondary" icon="paw">
         Recuperar
       </Button>
-      <LinkComponent to={routes.Login.path}>Vuelve al inicio</LinkComponent>
+      <LinkComponent to="/login">Vuelve al inicio</LinkComponent>
       <div className="leafs_parent">
         <div className="leafs_parent--relative">
           <div className="leafs_parent--relative-leaf1">

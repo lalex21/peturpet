@@ -31,7 +31,7 @@ const BuildingComponent = ({ logout, showLoading }) => {
           nuestros servicios.
         </p>
         <div className="building_component--info-button">
-          <Button className="secondary" onClick={Logout}>
+          <Button typeButton="primary" paw onClick={Logout}>
             <span>Volver al inicio</span>
           </Button>
         </div>

@@ -105,13 +105,13 @@ const Onboardingtemplate = ({
                 >
                   {step === dots - 1 ? (
                     <LinkComponent to="/login">
-                      <Button typeButton="secundary" size="large">
+                      <Button typeButton="secondary" size="large">
                         Comienza ahora
                       </Button>
                     </LinkComponent>
                   ) : (
                     <Button
-                      typeButton="secundary"
+                      typeButton="secondary"
                       size="large"
                       onClick={toNextStep}
                     >

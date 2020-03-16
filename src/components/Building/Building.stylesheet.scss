@@ -40,6 +40,10 @@
     &-button {
       padding: 0 6%;
 
+      .button_component {
+        width: 100%;
+      }
+
       @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
         padding: 0 15%;
       }

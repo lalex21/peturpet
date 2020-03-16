@@ -1,8 +1,61 @@
 import React from 'react';
+import PropTypes from '../../../utils/PropTypes';
+
 import Leaf1 from '../../frames/Leaf1/Leaf1.frame';
 import Leaf2 from '../../frames/Leaf2/Leaf2.frame';
 
-const StepFinishAnimation = () => {
+const StepFinishAnimation = ({ leaf1, leaf2, leaf3, ...props }) => {
+  const transition = {
+    duration: 1,
+    delay: 0.15
+  };
+
+  const variantsLeaf1 = {
+    hidden: {
+      y: leaf1.init.y,
+      rotate: leaf1.init.rotate
+    },
+    visible: {
+      y: leaf1.to.y,
+      rotate: leaf1.to.rotate,
+      transition
+    }
+  };
+
+  const variantsLeaf2 = {
+    hidden: {
+      x: leaf2.init.x,
+      y: leaf2.init.y,
+      rotate: leaf2.init.rotate,
+      opacity: leaf2.init.opacity
+    },
+    visible: {
+      x: leaf2.to.x,
+      y: leaf2.to.y,
+      rotate: leaf2.to.rotate,
+      opacity: leaf2.to.opacity,
+      transition
+    }
+  };
+
+  const variantsLeaf3 = {
+    hidden: {
+      x: leaf3.init.x,
+      y: leaf3.init.y,
+      rotate: leaf3.init.rotate,
+      opacity: leaf3.init.opacity
+    },
+    visible: {
+      x: leaf3.to.x,
+      y: leaf3.to.y,
+      rotate: leaf3.to.rotate,
+      opacity: leaf3.to.opacity,
+      transition
+    }
+  };
+
+  console.log('routes_props', props);
+
   return (
     <svg
       id="Grupo_129"
@@ -29,9 +82,10 @@ const StepFinishAnimation = () => {
         y={25}
         width={130}
         animation={{
-          initial: {
-            rotate: -50
-          }
+          // initial: {
+          //   rotate: -50
+          // }
+          variants: variantsLeaf3
         }}
       />
       <Leaf1
@@ -40,9 +94,25 @@ const StepFinishAnimation = () => {
         y={0}
         width={150}
         animation={{
-          initial: {
-            rotate: 0
-          }
+          // initial: {
+          //   rotate: 0
+          // }
+          variants: variantsLeaf1
+        }}
+      />
+      <Leaf1
+        color="#FD9697"
+        x={162}
+        y={85}
+        width={180}
+        animation={{
+          // initial: {
+          //   // x: 20,
+          //   // y: -20,
+          //   // rotate: 20,
+          //   opacity: 0.6
+          // },
+          variants: variantsLeaf2
         }}
       />
       <g id="Grupo_127" data-name="Grupo 127">
@@ -380,6 +450,36 @@ const StepFinishAnimation = () => {
       </g>
     </svg>
   );
+};
+
+StepFinishAnimation.defaultProps = {
+  leaf1: {
+    init: 0,
+    to: 0
+  },
+  leaf2: {
+    init: 0,
+    to: 0
+  },
+  leaf3: {
+    init: 0,
+    to: 0
+  }
+};
+
+StepFinishAnimation.propTypes = {
+  leaf1: PropTypes.shape({
+    init: PropTypes.stringOrNumber,
+    to: PropTypes.stringOrNumber
+  }),
+  leaf2: PropTypes.shape({
+    init: PropTypes.stringOrNumber,
+    to: PropTypes.stringOrNumber
+  }),
+  leaf3: PropTypes.shape({
+    init: PropTypes.stringOrNumber,
+    to: PropTypes.stringOrNumber
+  })
 };
 
 export default StepFinishAnimation;
