@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "https://lalex21.github.io/peturpet/static/css/main.8ddaac0a.chunk.css",
-    "main.js": "https://lalex21.github.io/peturpet/static/js/main.d7aa1c85.chunk.js",
-    "main.js.map": "https://lalex21.github.io/peturpet/static/js/main.d7aa1c85.chunk.js.map",
+    "main.css": "https://lalex21.github.io/peturpet/static/css/main.6a4a7391.chunk.css",
+    "main.js": "https://lalex21.github.io/peturpet/static/js/main.861359d0.chunk.js",
+    "main.js.map": "https://lalex21.github.io/peturpet/static/js/main.861359d0.chunk.js.map",
     "runtime-main.js": "https://lalex21.github.io/peturpet/static/js/runtime-main.7ce014ec.js",
     "runtime-main.js.map": "https://lalex21.github.io/peturpet/static/js/runtime-main.7ce014ec.js.map",
-    "static/js/2.6222ff5d.chunk.js": "https://lalex21.github.io/peturpet/static/js/2.6222ff5d.chunk.js",
-    "static/js/2.6222ff5d.chunk.js.map": "https://lalex21.github.io/peturpet/static/js/2.6222ff5d.chunk.js.map",
+    "static/js/2.5162b68d.chunk.js": "https://lalex21.github.io/peturpet/static/js/2.5162b68d.chunk.js",
+    "static/js/2.5162b68d.chunk.js.map": "https://lalex21.github.io/peturpet/static/js/2.5162b68d.chunk.js.map",
     "index.html": "https://lalex21.github.io/peturpet/index.html",
-    "precache-manifest.f2cc8b35cb7063680c00afcbe60d2c19.js": "https://lalex21.github.io/peturpet/precache-manifest.f2cc8b35cb7063680c00afcbe60d2c19.js",
+    "precache-manifest.efdfe821d1b5572e311da26664e0295a.js": "https://lalex21.github.io/peturpet/precache-manifest.efdfe821d1b5572e311da26664e0295a.js",
     "service-worker.js": "https://lalex21.github.io/peturpet/service-worker.js",
-    "static/css/main.8ddaac0a.chunk.css.map": "https://lalex21.github.io/peturpet/static/css/main.8ddaac0a.chunk.css.map",
-    "static/js/2.6222ff5d.chunk.js.LICENSE.txt": "https://lalex21.github.io/peturpet/static/js/2.6222ff5d.chunk.js.LICENSE.txt",
-    "static/media/LOGO.f8f4d535.svg": "https://lalex21.github.io/peturpet/static/media/LOGO.f8f4d535.svg",
-    "static/media/index.scss": "https://lalex21.github.io/peturpet/static/media/Roboto-Regular.11eabca2.ttf",
+    "static/css/main.6a4a7391.chunk.css.map": "https://lalex21.github.io/peturpet/static/css/main.6a4a7391.chunk.css.map",
+    "static/js/2.5162b68d.chunk.js.LICENSE.txt": "https://lalex21.github.io/peturpet/static/js/2.5162b68d.chunk.js.LICENSE.txt",
+    "static/media/LOGO.d81aff78.svg": "https://lalex21.github.io/peturpet/static/media/LOGO.d81aff78.svg",
     "static/media/Splash.stylesheet.scss": "https://lalex21.github.io/peturpet/static/media/bg.d8b6ad77.png",
+    "static/media/FacebookLogin.stylesheet.scss": "https://lalex21.github.io/peturpet/static/media/facebook.8cc4c9ea.svg",
     "static/media/GoogleLogin.stylesheet.scss": "https://lalex21.github.io/peturpet/static/media/google2.81ad048e.svg",
-    "static/media/Button.stylesheet.scss": "https://lalex21.github.io/peturpet/static/media/paw.a206021b.svg"
+    "static/media/Layout.stylesheet.scss": "https://lalex21.github.io/peturpet/static/media/huellitas.06c45bf5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7ce014ec.js",
-    "static/js/2.6222ff5d.chunk.js",
-    "static/css/main.8ddaac0a.chunk.css",
-    "static/js/main.d7aa1c85.chunk.js"
+    "static/js/2.5162b68d.chunk.js",
+    "static/css/main.6a4a7391.chunk.css",
+    "static/js/main.861359d0.chunk.js"
   ]
 }
