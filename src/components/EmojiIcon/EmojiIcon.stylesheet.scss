@@ -1,0 +1,16 @@
+@import '../../assets/stylesheets/variables';
+
+.emojiicon_component {
+    height: 91px;
+    width: 71px;
+    border: 1px solid #BFC6FF;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: $fs-emoji;
+        line-height: $lh-emoji;
+    }
+}
