@@ -10,6 +10,7 @@ import { showLoading as showLoadingAction } from '../../actions/Application/Appl
 import './Building.stylesheet.scss';
 import Button from '../Button/Button.component';
 import PropTypes from '../../utils/PropTypes';
+import LinkComponent from '../Link/Link.component';
 
 const BuildingComponent = ({ logout, showLoading }) => {
   const Logout = () => {
@@ -31,9 +32,11 @@ const BuildingComponent = ({ logout, showLoading }) => {
           nuestros servicios.
         </p>
         <div className="building_component--info-button">
-          <Button className="secondary" onClick={Logout}>
-            <span>Volver al inicio</span>
-          </Button>
+          <LinkComponent to="/">
+            <Button typeButton="primary" paw onClick={Logout}>
+              <span>Volver al inicio</span>
+            </Button>
+          </LinkComponent>
         </div>
       </Col>
     </Row>

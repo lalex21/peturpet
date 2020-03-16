@@ -105,13 +105,13 @@ const Onboardingtemplate = ({
                 >
                   {step === dots - 1 ? (
                     <LinkComponent to="/login">
-                      <Button typeButton="secundary" size="large">
-                        Comienza ahora
+                      <Button typeButton="secondary" size="large">
+                        Inicia sesión
                       </Button>
                     </LinkComponent>
                   ) : (
                     <Button
-                      typeButton="secundary"
+                      typeButton="secondary"
                       size="large"
                       onClick={toNextStep}
                     >
@@ -122,8 +122,8 @@ const Onboardingtemplate = ({
                 <Col sm={12} className="onboarding_template_container--login">
                   <LinkComponent to="/login">
                     <p>
-                      ¿Ya tienes una cuenta?&nbsp;
-                      <span>Iniciar sesión</span>
+                      ¿Aún no tienes una cuenta?&nbsp;
+                      <span>Regístrate</span>
                     </p>
                   </LinkComponent>
                 </Col>

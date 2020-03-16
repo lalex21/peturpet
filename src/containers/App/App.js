@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loadAuth2 } from 'gapi-script';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { setDefaultBreakpoints } from 'react-socks';
 
 import { ClientID as GoogleClientID } from '../../constants/AppParams';
@@ -69,9 +69,11 @@ const AppContainer = ({ auth, isLoading, login, hideLoading }) => {
     <BrowserRouter>
       <ErrorBoundary>
         <AnimatePresence exitBeforeEnter>
-          <main>
-            <Router isLogin={auth} isLoading={isLoading} />
-          </main>
+          <motion.div exit={{ opacity: 0 }}>
+            <main>
+              <Router isLogin={auth} isLoading={isLoading} />
+            </main>
+          </motion.div>
         </AnimatePresence>
       </ErrorBoundary>
     </BrowserRouter>

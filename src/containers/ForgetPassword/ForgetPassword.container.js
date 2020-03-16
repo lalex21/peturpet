@@ -28,10 +28,10 @@ const ForgotPasswordContainer = ({ routes }) => {
         options={['Mi celular', 'Mi correo']}
       />
       <Input placeholder="Mi celular" />
-      <Button className="secondary" icon="paw">
+      <Button typeButton="primary" paw>
         Recuperar
       </Button>
-      <LinkComponent to={routes.Login.path}>Vuelve al inicio</LinkComponent>
+      <LinkComponent to="/login">Vuelve al inicio</LinkComponent>
       <div className="leafs_parent">
         <div className="leafs_parent--relative">
           <div className="leafs_parent--relative-leaf1">

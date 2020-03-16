@@ -97,8 +97,8 @@ const LoginContainer = ({ routes }) => {
                       <Checkbox name="Recordarme" />
                     </div>
                     <div className="login_container--form-info-link">
-                      <LinkComponent to="">
-                        ¿Olvidates tu contraseña?
+                      <LinkComponent to="/recover-password">
+                        ¿Olvidaste tu contraseña?
                       </LinkComponent>
                     </div>
                   </div>
@@ -122,10 +122,10 @@ const LoginContainer = ({ routes }) => {
                 </Col>
                 <Col sm={12}>
                   <div className="login_container--form-signin">
-                    <LinkComponent to="/sign-in">
+                    <LinkComponent to="/building">
                       <p>
-                        ¿Ya tienes una cuenta?&nbsp;
-                        <span>Iniciar sesión</span>
+                        ¿Aún no tienes una cuenta?&nbsp;
+                        <span>Regístrate</span>
                       </p>
                     </LinkComponent>
                   </div>

@@ -1,35 +1,44 @@
-.checkbox_component {  
-    display: block;
-    position: relative;
-    padding-left: 35px;
+// .checkbox_component {
+//     display: block;
+//     position: relative;
+//     padding-left: 35px;
 
-    &:hover {
-        cursor: pointer;
-    }
+//     &:hover {
+//         cursor: pointer;
+//     }
 
-    &--input[type='checkbox'] {
-        position: absolute;
-        display: none;
+//     &--input[type='checkbox'] {
+//         position: absolute;
+//         display: none;
 
-        &:checked + div {
-          label {
-            background: #fd9697;
-            background-size: 8px;
-            border: none;
-            border-radius: 50%;
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-          }
-        }
-    }
+//         &:checked + div {
+//           label {
+//             background: #fd9697;
+//             background-size: 8px;
+//             border: none;
+//             border-radius: 50%;
+//             display: inline-block;
+//             width: 8px;
+//             height: 8px;
+//           }
+//         }
+//     }
 
-    &--checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-    }
+//     &--checkmark {
+//         font-family: Roboto;
+//         font-weight: 500;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         height: 25px;
+//         width: 25px;
+//         background-color: #eee;
+//     }
+// }
+
+.checkbox_component {
+  &--input {
+  }
+  &--checkmark {
+  }
 }

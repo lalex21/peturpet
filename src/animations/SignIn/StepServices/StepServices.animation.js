@@ -1,8 +1,57 @@
 import React from 'react';
+import PropTypes from '../../../utils/PropTypes';
+
 import Leaf1 from '../../frames/Leaf1/Leaf1.frame';
 import Leaf2 from '../../frames/Leaf2/Leaf2.frame';
 
-const StepServicesAnimation = () => {
+const StepServicesAnimation = ({ leaf1, leaf2, leaf3, ...props }) => {
+  const transition = {
+    duration: 1,
+    delay: 0.15
+  };
+
+  const variantsLeaf1 = {
+    hidden: {
+      y: leaf1.init.y,
+      rotate: leaf1.init.rotate
+    },
+    visible: {
+      y: leaf1.to.y,
+      rotate: leaf1.to.rotate,
+      transition
+    }
+  };
+
+  const variantsLeaf2 = {
+    hidden: {
+      x: leaf2.init.x,
+      y: leaf2.init.y,
+      rotate: leaf2.init.rotate
+    },
+    visible: {
+      x: leaf2.to.x,
+      y: leaf2.to.y,
+      rotate: leaf2.to.rotate,
+      transition
+    }
+  };
+
+  const variantsLeaf3 = {
+    hidden: {
+      x: leaf3.init.x,
+      y: leaf3.init.y,
+      rotate: leaf3.init.rotate
+    },
+    visible: {
+      x: leaf3.to.x,
+      y: leaf3.to.y,
+      rotate: leaf3.to.rotate,
+      transition
+    }
+  };
+
+  console.log('routes_props', props);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,22 +62,26 @@ const StepServicesAnimation = () => {
       <Leaf1
         color="#F0F8CC"
         x={-75}
-        y={40}
+        y={0}
         animation={{
-          initial: {
-            rotate: -15
-          }
+          // initial: {
+          //   rotate: -15
+          // }
+          variants: variantsLeaf1
         }}
       />
       <Leaf2
         color="#CBCFF7"
-        x={85}
-        y={10}
+        // x={85}
+        // y={10}
+        x={144}
+        y={24}
         width={140}
         animation={{
-          initial: {
-            rotate: -50
-          }
+          // initial: {
+          //   rotate: -50
+          // }
+          variants: variantsLeaf3
         }}
       />
       <Leaf1
@@ -37,9 +90,10 @@ const StepServicesAnimation = () => {
         y={85}
         width={180}
         animation={{
-          initial: {
-            rotate: 30
-          }
+          // initial: {
+          //   rotate: 30
+          // }
+          variants: variantsLeaf2
         }}
       />
       <g
@@ -594,6 +648,36 @@ const StepServicesAnimation = () => {
       </g>
     </svg>
   );
+};
+
+StepServicesAnimation.propTypes = {
+  leaf1: PropTypes.shape({
+    init: PropTypes.stringOrNumber,
+    to: PropTypes.stringOrNumber
+  }),
+  leaf2: PropTypes.shape({
+    init: PropTypes.stringOrNumber,
+    to: PropTypes.stringOrNumber
+  }),
+  leaf3: PropTypes.shape({
+    init: PropTypes.stringOrNumber,
+    to: PropTypes.stringOrNumber
+  })
+};
+
+StepServicesAnimation.defaultProps = {
+  leaf1: {
+    init: 0,
+    to: 0
+  },
+  leaf2: {
+    init: 0,
+    to: 0
+  },
+  leaf3: {
+    init: 0,
+    to: 0
+  }
 };
 
 export default StepServicesAnimation;

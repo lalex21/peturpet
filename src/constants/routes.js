@@ -33,6 +33,10 @@ export const RoutesNoAuth = {
     path: `${pathRoot}/recover-password`,
     component: RecoverPasswordContainer
   },
+  Building: {
+    path: `${pathRoot}/building`,
+    component: BuildingContainer
+  },
   LoginPath: {
     path: '/',
     redirect: 'SignIn'

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const BUTTON_TYPES = ['primary', 'secundary', 'empty'];
+export const BUTTON_TYPES = ['primary', 'secondary', 'empty'];
 export const BUTTON_SIZES = ['small', 'medium', 'large'];
 
 export default {

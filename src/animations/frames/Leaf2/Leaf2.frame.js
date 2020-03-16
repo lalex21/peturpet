@@ -8,7 +8,7 @@ const Leaf2 = ({
   y,
   width,
   height,
-  animation: { initial, animate, transition }
+  animation: { initial, animate, variants, transition }
 }) => {
   return (
     <svg
@@ -20,7 +20,12 @@ const Leaf2 = ({
       viewBox="0 0 101.9 121.2"
       xmlSpace="preserve"
     >
-      <motion.g initial={initial} animate={animate} transition={transition}>
+      <motion.g
+        variants={variants}
+        initial={initial}
+        animate={animate}
+        transition={transition}
+      >
         <path
           fill={color}
           className="st0"
@@ -61,6 +66,7 @@ Leaf2.defaultProps = {
   animation: {
     initial: {},
     animate: {},
+    variants: {},
     transition: {}
   }
 };

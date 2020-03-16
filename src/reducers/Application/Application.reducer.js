@@ -4,7 +4,8 @@ import {
 } from '../../constants/Application/Application.types';
 
 const initialState = {
-  isLoading: true
+  // isLoading: true
+  isLoading: false
 };
 
 const ApplicationReducer = (state = initialState, { type, payload } = {}) => {
