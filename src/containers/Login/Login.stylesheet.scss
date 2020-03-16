@@ -10,6 +10,7 @@
     // max-height: 290px;
     overflow: hidden;
     margin-bottom: 2px;
+    position: relative;
 
     &-logo {
       padding-top: 8px;
@@ -20,6 +21,26 @@
 
     &-content {
       margin-bottom: -65px;
+    }
+
+    &-dots {
+      position: absolute;
+      z-index: 99;
+      top: 0;
+
+      &,
+      svg {
+        height: 100%;
+      }
+      
+      &-left {
+        left: -50px;
+      }
+
+      &-right {
+        top: -135px;
+        right: -35px;
+      }
     }
   }
 
