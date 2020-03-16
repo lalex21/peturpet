@@ -1,0 +1,11 @@
+@import '../../assets/stylesheets/variables';
+
+.emojiicongenerator_component {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacing-l;
+
+    .emojiicon_component:not(:last-child) {
+        margin-right: $spacing-xs;
+    }
+}

@@ -5,6 +5,7 @@ import LayoutTemplate from '../../templates/Layout/Layout.template';
 import DogAnimation from '../../animations/Dog/Dog.animation';
 
 import LinkComponent from '../../components/Link/Link.component';
+import EmojiIconGenerator from '../../components/EmojiIconGenerator/EmijoIconGenerator.component';
 
 import './RecoverPassword.stylesheet.scss';
 
@@ -22,7 +23,8 @@ const RecoverPasswordContainer = ({ routes }) => {
           Revisa tu celular e ingresa el código que te mandé para recuperar tu
           contraseña.
         </p>
-        <LinkComponent to={routes.Login.path}>go Login</LinkComponent>
+        <EmojiIconGenerator n={4} />
+        <LinkComponent to={routes.Login.path}>Cancelar</LinkComponent>
       </LayoutTemplate>
     </RouteAnimate>
   );
