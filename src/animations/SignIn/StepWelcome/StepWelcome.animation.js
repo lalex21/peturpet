@@ -357,6 +357,12 @@ const StepWelcomeAnimation = () => {
           fill="#f7eee6"
         />
       </g>
+      {/* <div className="sign_in_container--dots sign_in_container--dots-left">
+        <Dots />
+      </div>
+      <div className="sign_in_container--dots sign_in_container--dots-right">
+        <Dots />
+      </div> */}
     </svg>
   );
 };

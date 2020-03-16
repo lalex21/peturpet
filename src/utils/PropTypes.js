@@ -15,7 +15,8 @@ export default {
   animation: PropTypes.shape({
     initial: PropTypes.objectOf([PropTypes.string, PropTypes.number]),
     animate: PropTypes.objectOf([PropTypes.string, PropTypes.number]),
-    transition: PropTypes.objectOf([PropTypes.string, PropTypes.number])
+    transition: PropTypes.objectOf([PropTypes.string, PropTypes.number]),
+    variants: PropTypes.objectOf([PropTypes.string, PropTypes.number])
   }),
   ...PropTypes
 };

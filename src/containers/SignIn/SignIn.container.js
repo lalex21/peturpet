@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from '../../utils/PropTypes';
 
@@ -7,13 +8,47 @@ import StepToStep from '../../components/StepToStep/StepToStep.component';
 import StepFinishAnimation from '../../animations/SignIn/StepFinish/StepFinish.animation';
 import StepWelcomeAnimation from '../../animations/SignIn/StepWelcome/StepWelcome.animation';
 import StepServicesAnimation from '../../animations/SignIn/StepServices/StepServices.animation';
-import Dots from '../../animations/frames/Dots/Dots.framer';
+import GroupDots from '../../components/GroupDots/GroupDots.component';
 // import LinkComponent from '../../components/Link/Link.component';
 
 import './SignIn.stylesheet.scss';
 
-const SignInContainer = ({ routes }) => {
-  console.log('routes', routes);
+const SignInContainer = ({ routes, ...props }) => {
+  console.log('routes_props', props, routes);
+
+  const StepWelcomeDots = {
+    right: {
+      init: -80,
+      to: -80
+    },
+    left: {
+      init: 5,
+      to: 5
+    }
+  };
+
+  const StepServicesDots = {
+    right: {
+      init: -80,
+      to: 20
+    },
+    left: {
+      init: 5,
+      to: -80
+    }
+  };
+
+  const StepFinishDots = {
+    right: {
+      init: -80,
+      to: 80
+    },
+    left: {
+      init: 5,
+      to: -110
+    }
+  };
+
   return (
     <RouteAnimate outVariant={{ opacity: 1 }}>
       <div className="sign_in_container">
@@ -30,6 +65,7 @@ const SignInContainer = ({ routes }) => {
             >
               <StepWelcomeAnimation />
             </div>
+            <GroupDots {...StepWelcomeDots} />
           </Onboarding>
           <Onboarding
             backgroundColor="#BFC6FF"
@@ -42,6 +78,7 @@ const SignInContainer = ({ routes }) => {
               }}
             >
               <StepServicesAnimation />
+              <GroupDots {...StepServicesDots} />
             </div>
           </Onboarding>
           <Onboarding
@@ -55,15 +92,10 @@ const SignInContainer = ({ routes }) => {
               }}
             >
               <StepFinishAnimation />
+              <GroupDots {...StepFinishDots} />
             </div>
           </Onboarding>
         </StepToStep>
-        <div className="sign_in_container--dots sign_in_container--dots-left">
-          <Dots />
-        </div>
-        <div className="sign_in_container--dots sign_in_container--dots-right">
-          <Dots />
-        </div>
       </div>
     </RouteAnimate>
   );

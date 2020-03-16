@@ -1,7 +1,7 @@
 @import '../../assets/stylesheets/variables';
 
 .sign_in_container {
-  position: relative;
+  overflow: hidden;
   &--bubble {
     overflow: hidden;
     border-radius: 100%;
@@ -46,27 +46,21 @@
   &--dots {
     position: absolute;
     z-index: 99;
+    top: 0;
+
+    &,
+    svg {
+      height: 100%;
+    }
 
     &-left {
-      top: 38%;
-      left: -2%;
+      // top: 36%;
+      left: -35px;
     }
 
     &-right {
-      top: 25%;
-      right: 0px;
-    }
-
-    @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
-      &-left {
-        top: 0%;
-        left: -20px;
-      }
-
-      &-right {
-        top: 0%;
-        right: 0px;
-      }
+      // top: 6%;
+      right: -18px;
     }
   }
 }
