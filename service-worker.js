@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://lalex21.github.io/peturpet/precache-manifest.cecfa68aacc44cef3d3e4cba43cc724a.js"
+  "https://lalex21.github.io/peturpet/precache-manifest.7d6f38a0c54c8745fd5550d8542a6044.js"
 );
 
 self.addEventListener('message', (event) => {
